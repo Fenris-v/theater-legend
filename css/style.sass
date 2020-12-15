@@ -1,0 +1,196 @@
+@import "variables"
+@import "prefixes"
+/* RESET */
+@import "normalize"
+@import "slick"
+
+body
+  background: -webkit-linear-gradient(180deg, rgb(45, 45, 45) 10%, rgb(59, 23, 29) 100%)
+  background: -moz-linear-gradient(180deg, rgb(45, 45, 45) 10%, rgb(59, 23, 29) 100%)
+  background: linear-gradient(180deg, rgb(45, 45, 45) 10%, rgb(59, 23, 29) 100%)
+  width: 100%
+  overflow: hidden
+  min-height: 100vh
+  font-family: $regular
+  font-size: 20px
+
+.wrapper
+  max-width: 1330px
+  margin: 0 auto
+  padding: 0 15px
+  @include box-sizing()
+
+.btn
+  display: flex
+  @include font($textBlack, $bold, bold, 18px, 40px)
+  text-transform: uppercase
+  text-decoration: none
+  padding: 0 35px
+
+  &_gold
+    background: $gold
+    @include transition()
+
+    &:hover
+      color: $white
+      background: $red
+      @include transition()
+
+// HEADER
+.header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 10px 0
+  @include box-sizing()
+
+  .navMenu
+    ul
+      display: flex
+      align-items: center
+      margin: 0
+      padding: 0
+      list-style: none
+
+      a
+        padding: 0 15px
+        color: $white
+        text-decoration: none
+        @include transition()
+
+        &:hover
+          color: $gold
+          @include transition()
+
+.logo
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 80px
+
+  img
+    @include object-fit(contain)
+
+.phone
+  text-decoration: none
+  @include font($gold, $bold, bold, 24px)
+  @include transition()
+  display: flex
+
+
+  &:hover
+    color: $white
+    @include transition()
+
+.socials
+  display: flex
+
+  a
+    text-decoration: none
+    display: flex
+    width: 24px
+    height: 24px
+
+    &:not(:last-child)
+      margin-right: 15px
+
+    img
+      @include object-fit(contain)
+
+.s_firstScreen
+  margin-bottom: 20px
+
+.firstScreen
+  width: 100%
+  height: 550px
+  position: relative
+
+  &__slider
+    height: 100%
+
+    img
+      @include object-fit()
+
+  &__logo
+    position: absolute
+    top: 50%
+    left: 50%
+    @include transform(translate(-50%, -50%))
+
+.posters
+  &__row
+    display: flex
+
+    &:nth-child(even)
+      flex-direction: row-reverse
+
+  &__item
+    width: 50%
+    flex-shrink: 0
+    @include box-sizing()
+    color: $white
+    background-size: cover !important
+    background-repeat: no-repeat !important
+    background-position: center right !important
+    padding: 30px 30px 30px 50px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &_withoutIcon
+      padding-right: 50px
+
+      .posters__item_left
+        width: 100%
+
+    &:first-child
+      background: $gold
+      color: $textBlack
+
+      .posters__item_right a
+        color: #F5D67D
+
+        &:hover
+          color: $textBlack
+
+    &_right
+      flex-shrink: 0
+      width: 125px
+      display: flex
+      flex-direction: column
+      align-items: center
+
+      img
+        margin-bottom: 20px
+
+      a
+        display: flex
+        text-align: center
+        @include font(#C2878C, $regular, normal, 20px)
+        @include transition()
+
+        &:hover
+          color: $white
+          @include transition()
+
+    &__content
+      p
+        margin: 0
+
+    &__date
+      margin-bottom: 15px
+      @include font($white, $bold, bold, 24px)
+
+      &__time
+        color: $gold
+        margin-right: 10px
+
+  h2
+    font-size: 36px
+    font-family: $bold
+    margin: 0 0 15px
+
+@import "hamburger"
+
+/* RESPONSIVE */
+@import "responsive"
