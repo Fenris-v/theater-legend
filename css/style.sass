@@ -9,7 +9,7 @@ body
   background: -moz-linear-gradient(180deg, rgb(45, 45, 45) 10%, rgb(59, 23, 29) 100%)
   background: linear-gradient(180deg, rgb(45, 45, 45) 10%, rgb(59, 23, 29) 100%)
   width: 100%
-  overflow: hidden
+  overflow-x: hidden
   min-height: 100vh
   font-family: $regular
   font-size: 20px
@@ -26,6 +26,7 @@ body
   text-transform: uppercase
   text-decoration: none
   padding: 0 35px
+  white-space: nowrap
 
   &_gold
     background: $gold
@@ -46,6 +47,7 @@ body
 
   .navMenu
     ul
+      white-space: nowrap
       display: flex
       align-items: center
       margin: 0
@@ -116,6 +118,10 @@ body
     top: 50%
     left: 50%
     @include transform(translate(-50%, -50%))
+    max-width: 70%
+
+    img
+      width: 100%
 
 .posters
   &__row

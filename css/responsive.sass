@@ -1,4 +1,66 @@
 @import "variables"
 @import "prefixes"
 
-@media only screen and (max-width: 1200px)
+@media only screen and (max-width: 1300px)
+  .navMenu
+    display: none
+
+  .header
+    > .socials
+      display: none
+
+  .btn
+    margin-right: 70px
+
+  .firstScreen
+    height: auto
+
+@media only screen and (max-width: 1000px)
+  .posters__item
+    flex-direction: column
+
+  .posters__item_left
+    margin-bottom: 20px
+
+  .posters__item_right
+    flex-direction: row
+    width: auto
+
+    a
+      text-align: left
+
+    img
+      margin-bottom: 0
+      margin-right: 20px
+
+@media only screen and (max-width: 767px)
+  .posters__row
+    flex-wrap: wrap
+
+  .posters__item
+    width: 100%
+
+@media only screen and (max-width: 640px)
+  body
+    font-size: 16px
+
+  .header
+    flex-direction: column
+
+    .btn
+      margin-right: 0
+
+    .logo, .phone
+      margin-bottom: 20px
+
+  .posters__item
+    padding: 15px
+
+  .posters h2
+    font-size: 24px
+
+  .posters__item__date
+    font-size: 18px
+
+  .posters__item_right a
+    font-size: 16px
