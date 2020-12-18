@@ -33,6 +33,24 @@
       margin-bottom: 0
       margin-right: 20px
 
+  .infoBlock__container
+    flex-direction: column
+
+    &.reverse
+      flex-direction: column-reverse
+
+  .infoBlock_half
+    width: 100%
+
+  .contacts__container
+    flex-direction: column
+
+  .contacts_half
+    width: 100%
+
+    &:last-child
+      height: 300px
+
 @media only screen and (max-width: 767px)
   .posters__row
     flex-wrap: wrap
@@ -64,3 +82,28 @@
 
   .posters__item_right a
     font-size: 16px
+
+  .infoBlock, .contacts
+    h2
+      font-size: 30px
+
+  .infoBlock__title
+    font-size: 20px
+
+  .infoBlock__icons__icon
+    width: 45%
+
+  .infoBlock__date_top .number
+    font-size: 30px
+
+  .infoBlock__date_top
+    font-size: 25px
+
+  .infoBlock__date_bottom
+    font-size: 20px
+
+  .infoBlock_half:first-child
+    padding: 20px
+
+  .s_art, .s_contacts, .s_posters
+    margin-bottom: 40px
